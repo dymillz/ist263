@@ -4,7 +4,7 @@ a:link {color: #ffdc2d;}
 h1 {color: #efefef;}
 h2 {color: #efefef;}
 nav {background-color: #5e5e5e;}
-nav a {color: #efefef;}
+nav a:link {color: #efefef;}
 nav a:hover {background-color: #40bbf9;}
 nav {padding: 10px}
 nav {margin-bottom: 30px}
