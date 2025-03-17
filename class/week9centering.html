@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Centering</title>
+    <style>
+        p {text-align: center}
+        .centeredbox {
+            border: #00ff00 2px solid; 
+            width: 30%; 
+            margin: 0 /*top*/, 40 /*right*/, 0/*bottom*/, auto/*left*/;
+            } /*must have both width change and margin change to show*/
+        .outercontainer {
+            display: flex;
+            border: #ff0000 2px solid;
+            padding: 1em;
+            justify-content: flex-end;
+            }
+        .outercontainer div {
+            border: #0000ff 1px solid;
+            padding: 1em;
+            margin: 1em;
+            }
+    </style>
+    </head>
+
+    <body>
+        <h1>heading here</h1>
+        <p>Body goes here</p>
+        <div class = "centeredbox">
+            Please center this box.
+        </div>
+        <div class = "outercontainer"> <!--making flexbox-->
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+
+        </div>
+    </body>
+
+</html>
