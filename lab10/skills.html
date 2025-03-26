@@ -14,12 +14,13 @@
                 text-align: center}
             .caption {
                 margin-left: 100px;
-            margin-right: 470px }
+                margin-right: 470px;}
             .icons {
                 display:flex; 
                 justify-content: space-evenly;
                 width: 70%;
                 margin: 100px 0 0 0;}
+            .icons p {text-align: center}
             .otherskillsbox {
                 background-image: url(../images/orangeslices.png); background-size: 45em; border-radius: 2em; 
                 margin: 50px auto 0 auto; 
@@ -27,7 +28,12 @@
             .contentsetup{
                 display:flex; 
                 justify-content: space-between;
-                padding: 0 20px;}
+                padding: 0 20px;
+                flex-wrap: wrap;}
+            @media only screen and (max-width: 991px){
+                 .caption {margin-right: 100px}}
+                 .icons {margin-left: 100px}
+            
         </style>
     
     </head>
