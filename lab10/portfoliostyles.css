@@ -11,7 +11,7 @@ nav a {padding: 10px}
 nav {margin-bottom: 30px}
 .quote {float: right;}
 .orangeimage {float: left; margin-right: 10px; border-radius: 2em; max-width: 100%}
-.biographytext {font-size: 1.1em;}
+.biographytext {font-size: 1.35em;}
 .locandlink {display: flex; background-image: url(../images/orangeslices.png); background-size: 90em; border-radius: 2em; margin: 30px}
 .formandmap {display: flex; background-image: url(../images/orangeslices.png); background-size: 90em; border-radius: 2em; margin: 30px;}
 .loc {color: #000000; padding: 10px; margin-left: 20px}
