@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+    </head>
+    <script>
+        /*defining a function:  */
+        function SecondBlock() {
+            alert("Second Alert") /*what happens when the function is called*/
+        }
+        function ThirdAlert() {
+            alert("Yet another alert");
+        }
+        function clicky() {
+            alert("Hello World!");
+        }
+        function hovery() {
+            alert("Hello Hoverer!");
+        }
+        function loady() {
+            alert("Hello Loader!")
+        }
+        
+    </script>
+
+    <body onload = "loady()"></body>
+        <script>
+        //    alert("I am sending an alert."); */ use "//" to comment out singular lines
+        </script> <!--inbody to load all the time-->
+        <h1>Content goes here</h1>
+         <p>body here</p>
+         <p><a href = "#" onclick = "SecondBlock(); /*pound key gives underline without going anywhere, and rest is calling function through event handler onclick*/">Click here for the second alert</a></p>
+         <p><a href = "#" onmouseover="ThirdAlert();">Here is the third alert.</a></p>
+         <ul>
+            <li><a href = "#" onclick = "clicky();">Here's the click.</a></li>
+            <li><a href = "#" onmouseover = "hovery();">Here's the hoverer.</a></li>
+         </ul>
+    </body>
+
+</html>
