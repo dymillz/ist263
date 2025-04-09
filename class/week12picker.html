@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>title here</title>
+    </head>
+        <script>
+            function changeColor() {
+                document.getElementById("thepage").style.backgroundColor = document.getElementById("picker").value; /*saying, change the background color to the color chosen from the picker*/
+            }
+        </script>
+
+    <body>
+        <h1>Color Picker</h1>
+         <p>Choose a color to change the background to!</p>
+    </body id="thepage">
+        <form>
+            <input onchange="changeColor();" id="picker" type="color"> <!--type=color will bring up a color picker-->
+        </form>
+    </body>
+
+</html>

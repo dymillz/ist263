@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>title here</title>
+        <script>
+            function change () {
+                document.getElementById("arrow").setAttribute("src","../images/green_arrow.png") /*Changes src to the value after the comma -ex. could add floating images*/
+            }
+            function changeback () {
+                document.getElementById("arrow").setAttribute("src", "../images/red_arrow.avif")
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Image Rollovers</h1>
+        <img id="arrow" onmouseover="change();" onmouseout="changeback();" src="../images/green_arrow.png" alt="green arrow">
+    </body>
+
+</html>
