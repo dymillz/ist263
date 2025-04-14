@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="projectstyles.css">
+        <title>Dylan Mills | Contact</title>
+    </head>
+    <style>
+         .box_hike {
+            height: 100%;
+            background-image: url("../images/hike.jpeg");
+            height: 100vh;
+            /*min-height: 100vh;*/
+            background-size: cover;
+            background-position: center;
+            /*background-position-x: 60%, right;
+            background-position-y: 1000, top;*/
+            background-repeat: no-repeat;
+            display: flex;
+         }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            display: flex;
+            border: white, 10px solid;
+            margin-top: 30px;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+        .navtext a:link {
+            font-size: 4em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        
+    </style>
+
+    <body>
+        <div class ="box_hike">
+            <nav>
+                <p class="navtext"><a href= "projecthome.html">DYLAN MILLS</p></a>
+                <div class = "hamburger"><a href="projectnavigation.html"><img src = "../images/squareham.png" alt="hamburgericon" width="100" height="60"></a>
+                </div>
+            </nav>
+            <h1>CONNECT</h1>
+            <div class = "form">
+                <form action="https://formspree.io/f/mnnjznqg" method="post">
+                <label for="fname">FIRST NAME:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">LAST NAME:</label><br>
+                <input type="text" id="lname" name="lname"><br> <!--how to make these next to each other-->
+                <label for="subject">SUBJECT:</label><br>
+                <input type="text" id="subject" name="subject"><br> <!--how to make these longer-->
+                <label for="email">EMAIL:</label><br>
+                <input type="text" id="email" name="subject"><br> 
+                <label for="message">MESSAGE:</label><br>
+                <textarea id="message" name="message" rows="10" cols="90"></textarea><br>
+                <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+            <h1>. . . NO MATTER THE DISTANCE</h1>
+            <a href="https://www.instagram.com/thekidthatflips/"><img src = "../images/instagramlogo.png" alt = "Instagram Logo" width="75" height="30"></a>
+            <a href="https://www.facebook.com/profile.php?id=100094337165685"><img src = "../images/facebooklogo.png" alt = "Facebook Logo" width="75" height="30"></a>
+        <footer>
+        <p>&copy; 2025 - All Rights Reserved</p>
+        </footer>  
+        </div>
+    </body>
+
+</html>
