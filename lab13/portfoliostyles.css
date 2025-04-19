@@ -26,3 +26,15 @@ nav {margin-bottom: 30px}
     .formandmap {flex-wrap: wrap;}}
 @media only screen and (min-width: 992px){
     .map {margin-left:60px}}
+.skip{
+    background-color: orange;
+    padding: 8px;
+    border: 2px solid black;
+    text-decoration: none;
+    position: absolute; /*will stay in one spot no matter what, inlcuding floats*/
+    top: 10px;
+    left:-999px; /*pushes the button OFF screen*/
+}
+.skip:focus { /*when button is tabbed to*/
+        left: 10px;
+}
