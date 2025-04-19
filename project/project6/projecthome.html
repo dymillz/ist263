@@ -49,25 +49,27 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .title p {
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin-left: 63px;
-      margin-top: -20px;
-      font-size: 160px;
-      font-weight: 200px;
+    .title {
+        background-color: black;
+        font-size: 160px;
+        font-weight: 200px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
     }
 
     .box_headshot {
       border: white, 18px solid;
       margin-left: 68px;
-      margin-top: -620px;
-      margin-bottom: 648px;
+      margin-top: 0px;
+    
       padding: 10px;
     }
 
     .box_headshot img {
-      margin-bottom: 100px;
+      
       padding: 0px;
       cursor: pointer;
     }
@@ -75,8 +77,8 @@
     .box_resume {
       border: white, 18px solid;
       margin-left: 100px;
-      margin-top: -620px;
-      margin-bottom: 648px;
+      margin-top: 0px;
+      
       padding: 10px;
     }
 
@@ -88,12 +90,6 @@
     }
 
     /* Glow */
-    .glow {
-        font-size: 80px;
-        color: #ffffff;
-        text-align: center;
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
-}
 
     /* Modal styles */
     .modal {
@@ -106,7 +102,7 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: black;
     }
 
     .modal-content {
@@ -145,29 +141,23 @@
       </div>
     </nav>
     <div class="name">
-      <p><strong><span style="letter-spacing: -17px;">D</span><span>Y</span>LAN<span style ="letter-spacing: -5px;"> </span>MIL<span
-            style="letter-spacing: 5px;">L</span><span>S</span></strong></p>
+        <p><strong><span style="letter-spacing: -17px;">D</span><span>Y</span>LAN<span style ="letter-spacing: -5px;"> </span>MIL<span style="letter-spacing: 5px;">L</span><span>S</span></strong></p>
     </div>
   </div>
 
   <!-- Title Section -->
-  <div class="box_lowerlanding">
-    <div class="title">
-      <p class = "glow">actor singer dancer</p>
-    </div>
-  </div>
+    <p class="title">actor singer dancer</p>
+  
 
   <!-- Headshot/Resume Section -->
   <div class="box_lowerlanding">
     <div class="box_headshot">
-      <img id="headshotimage" src="../images/headshotcropped.jpg" alt="Dylan Mills Headshot" height="770" width="570" />
-    </div>
+      <img id="headshotimage" src="../images/headshotcropped.jpg" alt="Dylan Mills Headshot" height="770" width="570" /></div>
     <div class="box_resume">
       <!-- Resume Image that opens PDF in new window -->
       <a href="../images/websiteresume25.pdf" target="_blank">
         <img class="resume" src="../images/websiteresumesized.png" width="570" height="770" alt="Resume" />
-      </a>
-    </div>
+      </a></div>
   </div>
 
   <footer>
