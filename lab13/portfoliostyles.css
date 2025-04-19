@@ -6,9 +6,9 @@ h2 {color: #efefef;}
 nav {background-color: #5e5e5e;}
 nav a {color: #efefef;}
 nav a:hover {background-color: #3b9fd1;}
-nav {padding-bottom: 20px;
-    padding-top: 20px;
-    padding-right: 15px;
+nav {padding-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 15px;
 }
 nav a {padding: 10px}
 nav {margin-bottom: 30px}
