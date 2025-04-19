@@ -1,12 +1,15 @@
 body {background-color: #000000;}
 body {color: #dcdcdc;}
-a:link {color: #ff8400;}
+a:link {color: white;}
 h1 {color: #efefef;}
 h2 {color: #efefef;}
 nav {background-color: #5e5e5e;}
 nav a {color: #efefef;}
 nav a:hover {background-color: #3b9fd1;}
-nav {padding: 10px}
+nav {padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 15px;
+}
 nav a {padding: 10px}
 nav {margin-bottom: 30px}
 .quote {float: right;}
@@ -27,9 +30,9 @@ nav {margin-bottom: 30px}
 @media only screen and (min-width: 992px){
     .map {margin-left:60px}}
 .skip{
-    background-color: white;
+    background-color: black;
     padding: 8px;
-    border: 2px solid black;
+    border: 2px solid white;
     text-decoration: none;
     position: absolute; /*will stay in one spot no matter what, inlcuding floats*/
     top: 10px;
