@@ -28,6 +28,7 @@
                 margin-top: 30px;
                 margin-right: 50px;
                 margin-left: 50px;
+                border-radius: 5px;
             }
         .navtext a:link {
             font-size: 4em;
@@ -43,56 +44,116 @@
             margin-top: 30px;
             margin-bottom: 20px
         }
-        footer {
-            text-align: center;
-            background-color: #000;
-            color: #fff;
-            margin-bottom: 0%; 
-            width: 100%;
-            margin-left:0%;
+        main {
+            flex: 1; /* Fills available space */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Keep content starting at top */
+            padding-bottom: 10%
         }
-        form {
-            text-align: left;
-            margin-left:30%
-        }
-        h1 {
+        .text_connect {
              margin-left: 10%;
-        }
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 5em;
+            margin-left: 40%;
+            margin-top: 30px;
+            margin-bottom: 30px
+            }
+        
         label {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
         
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /*gap to place space between hte boxes*/
+            max-width: 600px;
+            text-align: left;
+            margin-left:50%;
+            color: white;
+        }
+
+        .firstlast_containers {
+            display: flex;
+            gap: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            box-sizing: border-box; /*keeps box at 100% including borders and padding */
+            opacity: 0.5; /* 70% opacity */
+        }
+
+        input:focus, textarea:focus {
+            box-shadow: 0 0 5px 2.5px rgb(255, 255, 255);
+            outline: none;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #888;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+        }   
+        .socials {
+            display: flex;
+            margin-left: 67.5%;
+            margin-top: 2%;
+            gap: 25px;
+        }
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            margin-top: auto; 
+            width: 100%;
+        }
     </style>
 
     <body>
-        <div class ="box_hike">
             <nav>
                 <p class="navtext"><a href= "index.html">DYLAN MILLS</p></a>
                 <div class = "hamburger"><a href="projectnavigation.html"><img src = "../images/squareham.png" alt="hamburgericon" width="100" height="60"></a>
                 </div>
             </nav>
-            <h1>CONNECT</h1>
-            <div class = "form">
-                <form action="https://formspree.io/f/mnnjznqg" method="post">
-                <label for="fname">FIRST NAME:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">LAST NAME:</label><br>
-                <input type="text" id="lname" name="lname"><br> <!--how to make these next to each other-->
-                <label for="subject">SUBJECT:</label><br>
-                <input type="text" id="subject" name="subject"><br> <!--how to make these longer-->
-                <label for="email">EMAIL:</label><br>
-                <input type="text" id="email" name="subject"><br> 
-                <label for="message">MESSAGE:</label><br>
-                <textarea id="message" name="message" rows="10" cols="90"></textarea><br>
-                <input type="submit" value="SUBMIT">
-                </form>
-            </div>
-            <a href="https://www.instagram.com/thekidthatflips/"><img src = "../images/instagramlogo.png" alt = "Instagram Logo" width="30" height="30"></a>
-            <a href="https://www.facebook.com/profile.php?id=100094337165685"><img src = "../images/facebooklogo.png" alt = "Facebook Logo" width="30" height="30"></a>
-        </div>
-        <footer>
-            <p>&copy; 2025 - All Rights Reserved</p>
-        </footer>  
+            <main>
+                <p class = "text_connect glow">CONNECT</h1>
+                <div class = "form">
+                    <form action="https://formspree.io/f/mnnjznqg" method="post">
+                        <div class="firstlast_containers">
+                            <input type="text" id="first-name" placeholder="First Name" required>
+                            <input type="text" id="last-name" placeholder="Last Name" required>
+                        </div>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <textarea id="message" placeholder="Your Message" required height = "150"></textarea><!--placeholder puts label inside-->
+                        <button type="submit"><strong>SUBMIT</strong></button>
+                    </form>
+                        
+                </div>
+                <div class = "socials">
+                    <a href="https://www.instagram.com/thekidthatflips/"><img src = "../images/instagramlogo.png" alt = "Instagram Logo" width="30" height="30"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100094337165685"><img src = "../images/facebooklogo.png" alt = "Facebook Logo" width="30" height="30"></a>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2025 - All Rights Reserved</p>
+            </footer>  
     </body>
 
 </html>
