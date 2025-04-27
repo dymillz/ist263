@@ -6,3 +6,9 @@ p, footer{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
     text-align: center;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
 }
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}

@@ -1,0 +1,48 @@
+body {background-color: #000000;}
+body {color: #dcdcdc;}
+a:link {color: white;}
+h1 {color: #efefef;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h2 {color: #efefef;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+nav {background-color: #5e5e5e;}
+nav a {color: #efefef;}
+nav a:hover {background-color: #3b9fd1;}
+nav {padding-bottom: 20px;}
+nav a {padding: 10px}
+nav {margin-bottom: 30px}
+.quote {float: right;}
+.orangeimage {float: left; margin-right: 10px; border-radius: 2em; max-width: 100%}
+.biographytext {font-size: 1.35em;}
+.locandlink {display: flex; background-image: url(../images/orangeslices.png); background-size: 90em; border-radius: 2em; margin: 30px}
+.formandmap {display: flex; background-image: url(../images/orangeslices.png); background-size: 90em; border-radius: 2em; margin: 30px;}
+.loc {color: white; padding: 10px; margin-left: 20px}
+.addresstext {font-size:1.3em}
+.link {padding: 10px; margin-top: 50px; margin-left: 10px}
+.form {color: white; padding: 10px; margin-top: 30px; margin-left: 20px;}
+.map {padding: 25px; flex: 1;}
+.linkedinlogo {width: 1.25em; height: 1.25em}
+@media only screen and (max-width: 991px){
+    nav a {max-width: 100%; display: block}
+    span {display: none}
+    .formandmap {flex-wrap: wrap;}}
+@media only screen and (min-width: 992px){
+    .map {margin-left:60px}}
+.skip{
+    background-color: black;
+    padding: 8px;
+    border: 2px solid white;
+    text-decoration: none;
+    position: absolute; /*will stay in one spot no matter what, inlcuding floats*/
+    top: 10px;
+    left:-999px; /*pushes the button OFF screen*/
+}
+.skip:focus { /*when button is tabbed to*/
+        left: 10px;
+}
