@@ -13,58 +13,72 @@
       height: 100%;
     }
 
-    .hamburger {
-      position: absolute;
-      margin-top: 65px;
-      margin-right: 50px;
+    nav {
+      display: flex; 
+      justify-content:space-between;
+      align-items: center;
+      padding-top: 50px; 
+      background-color: transparent;
+      width: 90%;
+
+    }
+
+    nav a {
+      text-decoration: none; 
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size:3em;
+      opacity: 0.6;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #bcbcbc, 0 0 10px #bcbcbc, 0 0 12.5px #bcbcbc, 0 0 15px #bcbcbc, 0 0 27.5px #bcbcbc;
     }
 
     .box_landing {
-      height: 100%;
+      
       background-image: url("../images/noteoriousfinalsedited.jpg");
       height: 100vh;
-      /*min-height: 100vh;*/
       background-size: cover;
       background-position: center;
-      /*background-position-x: 60%, right;
-      background-position-y: 1000, top;*/
       background-repeat: no-repeat;
       display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .box_lowerlanding {
       background-color: black;
       height: 100vh;
-      /*min-height: 100vh;*/
-      background-size: cover;
       display: flex;
-      padding-bottom: 50
+      justify-content: center;
+      padding-bottom: 50px;
     }
 
     .name p {
-      margin-top: 615px;
-      margin-left: 55px;
+      margin-top: 38%;
       color: white;
       font-size: 200px;
-      margin: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
     }
 
     .title {
-        background-color: black;
-        font-size: 160px;
-        font-weight: 200px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        color: #ffffff;
-        text-align: center;
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
+      background-color: black;
+      font-size: 160px;
+      font-weight: 200px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: #ffffff;
+      text-align: center;
+      text-shadow: 0 0 5px gray, 0 0 10px #7b7b7b, 0 0 15px #7b7b7b, 0 0 20px #7b7b7b, 0 0 25px #7b7b7b, 0 0 30px #7b7b7b, 0 0 35px #7b7b7b;
     }
 
     .box_headshot {
-      border: white, 18px solid;
-      margin-left: 68px;
-      margin-top: 30px;
+      border: 18px solid rgba(255, 255, 255, 0.6);
+      margin-top: 5%;
       padding: 10px;
       border-radius: 5px;
     }
@@ -75,9 +89,9 @@
     }
 
     .box_resume {
-      border: white, 18px solid;
+      border: 18px solid rgba(255, 255, 255, 0.6);
       margin-left: 100px;
-      margin-top: 30px;
+      margin-top: 5%;
       padding: 10px;
       cursor: pointer;
       border-radius: 5px;
@@ -91,8 +105,6 @@
     }
 
     /* Glow */
-
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -124,9 +136,16 @@
     }
 
     #headshotimage:hover, .resume:hover {
-        box-shadow: 0 0 20px 10px rgb(255, 255, 255);
-}
-
+      box-shadow: 0 0 20px 10px rgb(255, 255, 255);
+    }
+    @media only screen and (max-width: 800px){
+      .hamburger {
+        position: absolute;
+        margin-top: 65px;
+        margin-right: 50px;
+      }
+    }
+      
   </style>
 </head>
 
@@ -135,30 +154,31 @@
   <!-- Landing Section -->
   <div class="box_landing">
     <nav>
-      <div class="hamburger">
-        <a href="projectnavigation.html">
-          <img src="../images/squareham.png" alt="Menu Icon" height="90" width="150" />
-        </a>
-      </div>
+      <a href="projectabout.html">ABOUT</a>
+      <a href="projectgallery.html">GALLERY</a>
+      <a href="index.html">RESUME</a>
+      <a href="projectnews.html">NEWS</a>
+      <a href="projectcontact.html">CONTACT</a>
     </nav>
     <div class="name">
-        <p><strong><span style="letter-spacing: -17px;">D</span><span>Y</span>LAN<span style ="letter-spacing: -5px;"> </span>MIL<span style="letter-spacing: 5px;">L</span><span>S</span></strong></p>
+      <p><strong><span style="letter-spacing: -20px;">D</span><span>Y</span>LAN<span style="letter-spacing: -5px;"> </span>MIL<span style="letter-spacing: 5px;">L</span><span>S</span></strong></p>
     </div>
   </div>
 
   <!-- Title Section -->
-    <p class="title">actor singer dancer</p>
-  
+  <p class="title">actor singer dancer</p>
 
   <!-- Headshot/Resume Section -->
   <div class="box_lowerlanding">
     <div class="box_headshot">
-      <img id="headshotimage" src="../images/headshotcropped.jpg" alt="Dylan Mills Headshot" height="770" width="570" /></div>
+      <img id="headshotimage" src="../images/headshotcropped.jpg" alt="Dylan Mills Headshot" height="770" width="570" />
+    </div>
     <div class="box_resume">
       <!-- Resume Image that opens PDF in new window -->
       <a href="../images/websiteresume25.pdf" target="_blank">
         <img class="resume" src="../images/websiteresumesized.png" width="570" height="770" alt="Resume" />
-      </a></div>
+      </a>
+    </div>
   </div>
 
   <footer>

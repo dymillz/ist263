@@ -1,4 +1,5 @@
-p, footer{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+p, footer{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 .glow {
     text-decoration: none;
     font-size: 80px;
@@ -11,4 +12,31 @@ footer {
     padding: 20px;
     background-color: #000;
     color: #fff;
+}
+#navlinks a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    margin-top: 50px;
+}
+
+#navlinks a:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
+}
+.nav_name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin-left:0px;
+    margin-top: 0px;
+    margin-right: 34%
 }
