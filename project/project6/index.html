@@ -137,8 +137,139 @@
       right: 20px;
     }
 
-    .modal {
+    >
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .box_landing {
+      background-image: url("../images/noteoriousfinalsexpanded.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 60px; 
+      flex-wrap: wrap;
+      justify-content: center;
+      position: absolute;
+      top: 30px;
+      width: 100%;
+      margin-left: -60px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      opacity: 0.6;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #bcbcbc, 0 0 10px #bcbcbc, 0 0 12.5px #bcbcbc, 0 0 15px #bcbcbc, 0 0 27.5px #bcbcbc;
+    }
+
+    .name {
+      text-align: center;
+      margin-top: auto;
+      font-size: 12vw; 
+    }
+
+    .name p {
+      margin: 0;
+      font-weight: bold;
+      white-space: nowrap;
+      font-size: 110%; 
+    }
+
+    .name-part {
+      display: inline;
+    }
+
+    .title {
+      text-align: center;
+      margin: 20px 0;
+      background-color: black;
+      text-decoration: none;
+      font-size: 120px;
+      color: #ffffff;
+      text-align: center;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 30px #bcbcbc;
+    }
+
+    .box_lowerlanding {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    #headshotimage {
+      width: 500px; 
+      max-width: 100%;
+      height: auto;
+      border: 10px solid rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      padding: 7px;
+    }
+    #headshotimage:hover {
+      box-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #bcbcbc, 0 0 10px #bcbcbc, 0 0 2.5px #bcbcbc, 0 0 15px #bcbcbc, 0 0 17.5px #bcbcbc;
+    }
+
+    #resumeimage {
+      width: 500px; 
+      height: 669px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      border: 10px solid rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      padding: 7px;
+    }
+    #resumeimage:hover {
+      box-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #bcbcbc, 0 0 10px #bcbcbc, 0 0 2.5px #bcbcbc, 0 0 15px #bcbcbc, 0 0 17.5px #bcbcbc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #fff;
+    }
+
+    #hamicon {
       display: none;
+      width: 70px;
+      height: 60px;
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+    }
+
+    .modal {
+      display: none; 
       position: fixed;
       z-index: 1000;
       padding-top: 100px;
@@ -146,8 +277,9 @@
       top: 0;
       width: 100%;
       height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); 
       overflow: auto;
-      background-color: black;
+      text-align: center;
     }
 
     .modal-content {
@@ -158,6 +290,7 @@
     }
 
     .close {
+      display: none;
       position: absolute;
       top: 15px;
       right: 35px;
@@ -166,6 +299,11 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    .modal.show .close {
+      display: block; 
+    }
+
     .mobilenoteorious {
       display: none;
       width: 100%;
@@ -259,11 +397,6 @@
       src="../images/headshotcropped.jpg"
       alt="Dylan Mills Headshot"
       onclick = "openModal()"/></a>
-      <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="img01" alt="" src="../images/placeholder.png">
-      </div>
-      <span class="close" onclick="closeModal()">&times;</span>
     <a href="../images/websiteresume25.pdf" target="_blank">
       <img
         id="resumeimage"
@@ -285,7 +418,7 @@
   </div>
 
   <div id="myModal" class="modal">
-    <span class="close">&times;</span>
+    <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="img01" alt = "" src  = "../images/placeholder.png">
   </div>
 
@@ -298,17 +431,24 @@
       document.getElementById("sideNav").style.width = "0";
     }
 
-      function openModal() {
-      const imgElement = document.getElementById("headshotimage");
-      const modal = document.getElementById("myModal");
-      const modalImg = document.getElementById("img01");
+    var modal = document.getElementById("myModal");
+    var imgElement = document.getElementById("headshotimage");
+    var span = document.getElementsByClassName("close")[0];
+    var modalImg = document.getElementById("img01");
 
+    imgElement.onclick = function() {
       modal.style.display = "block";
       modalImg.src = imgElement.src;
     }
 
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
   </script>
 </body>
