@@ -33,12 +33,13 @@
 
     nav {
       display: flex;
-      gap: 60px; /* Increased gap to add more space between the links */
+      gap: 60px; 
       flex-wrap: wrap;
       justify-content: center;
       position: absolute;
-      top: 25px;
+      top: 30px;
       width: 100%;
+      margin-left: -60px;
     }
 
     nav a {
@@ -47,6 +48,7 @@
       font-size: 2.5em;
       font-weight: bold;
       opacity: 0.6;
+      
     }
 
     nav a:hover {
@@ -57,14 +59,14 @@
     .name {
       text-align: center;
       margin-top: auto;
-      font-size: 12vw; /* Increased font size by 20% */
+      font-size: 12vw; 
     }
 
     .name p {
       margin: 0;
       font-weight: bold;
       white-space: nowrap;
-      font-size: 110%; /* Increased font size by 20% */
+      font-size: 110%; 
     }
 
     .name-part {
@@ -91,9 +93,8 @@
       flex-wrap: wrap;
     }
 
-    /* Individual styles for images */
     #headshotimage {
-      width: 500px; /* Set the exact size for headshot */
+      width: 500px; 
       max-width: 100%;
       height: auto;
       border: 10px solid rgba(255, 255, 255, 0.8);
@@ -109,7 +110,6 @@
     #resumeimage {
       width: 500px; 
       height: 669px;
-      max-width: 100%;
       margin: 10px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       border: 10px solid rgba(255, 255, 255, 0.8);
@@ -187,7 +187,7 @@
       left: 10px;
 }  
 
-    @media only screen and (max-width: 1066px) {
+    @media only screen and (max-width: 1109px) {
       nav {
         display: none;
       }
@@ -222,14 +222,16 @@
       }
 
       #headshotimage {
-        width: 80%; 
+        width: 100%;
+        height: auto;
+        max-width: 500px;
       }
-
       #resumeimage {
-        width: 95%;  
+        width: 100%;
+        height: auto;
+        max-width: 500px;
       }
-      
-    }
+  }
   </style>
 </head>
 <body>
@@ -252,18 +254,15 @@
   <p class="title">actor singer dancer</p>
 
   <div id="resume_section" class="box_lowerlanding"> 
-    <img
+    <a><img
       id="headshotimage"
       src="../images/headshotcropped.jpg"
-      alt="Dylan Mills Headshot"
-    />
+      alt="Dylan Mills Headshot"/></a>
     <a href="../images/websiteresume25.pdf" target="_blank">
       <img
         id="resumeimage"
         src="../images/websiteresumesized.png"
-        alt="Resume"
-      />
-    </a>
+        alt="Resume"/></a>
   </div>
 
   <footer>
