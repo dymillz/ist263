@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="projectstyles.css" />
+  <link rel="stylesheet" href="projectstyles.css"/>
   <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
   <title>Dylan Mills | Contact</title>
   <style>
@@ -245,17 +245,12 @@
   </footer>
 
   <div id="sideNav">
-    <span id="closeBtn" onclick="hideNav()">×</span>
+    <span id="closeX" onclick="hideNav()">×</span>
     <a href="projectabout.html">ABOUT</a>
     <a href="projectgallery.html">GALLERY</a>
     <a href="index.html#resume_section">RESUME</a>
     <a href="projectnews.html">NEWS</a>
     <a href="projectcontact.html">CONTACT</a>
-    </div>
-
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
     </div>
 
     <script>
@@ -265,20 +260,6 @@
 
     function hideNav() {
         document.getElementById("sideNav").style.width = "0";
-    }
-
-    const modal = document.getElementById('myModal');
-    const img = document.getElementById('headshotimage');
-    const modalImg = document.getElementById("img01");
-    const span = document.getElementsByClassName("close")[0];
-
-    img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
     }
     </script>
 </body>

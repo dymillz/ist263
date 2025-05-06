@@ -1,7 +1,7 @@
 html {
     scroll-behavior: smooth;
   }
-p, footer{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+p, footer{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .glow {
     text-decoration: none;
@@ -96,6 +96,7 @@ nav a.active {
     transition: 0.4s;
     padding-top: 60px;
     z-index: 2000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   #sideNav a {
@@ -106,6 +107,7 @@ nav a.active {
     text-decoration: none;
     text-align: center;
     opacity: 0.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   #sideNav a:hover {
@@ -113,7 +115,7 @@ nav a.active {
     text-shadow: 0 0 5px white;
   }
 
-  #sideNav #closeBtn {
+  #sideNav #closeX {
     position: absolute;
     top: 20px;
     right: 25px;
