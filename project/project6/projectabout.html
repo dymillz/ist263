@@ -12,48 +12,62 @@
         <title>Dylan Mills | About</title>
         <style>
             body {
-                background-image: url("../images/ringsphotoedited.jpg");
+                
                 position: absolute;
                 height: 100vh;
-                background-size: cover; /* Scale the image down */
-                background-position: center;
+                background-size: cover;
+                background-position: center 8%;
                 background-repeat: no-repeat;
-                background-color: black; /* Ensure the background stays black */
+                background-color: black; 
                 color: white;
-        }
-            .nav_box {
-                display: flex;
-                border: white, 10px solid;
-                margin-top: 30px;
-                margin-right: 50px;
-                margin-left: 50px;
-                border-radius: 5px;
-            }
-            .hamburger {
-                position: absolute;
-                right: 90px;
-                margin-top: 30px;
-                margin-bottom: 20px
             }
             main {
-                flex: 1; /* Fills available space */
+                flex: 1; 
                 padding: 20px;
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-start; /* Keep content starting at top */
+                flex-direction: row;
+                justify-content: flex-start; 
                 padding-bottom: 10%
             }
-            .text_about {
-                font-size: 5em;
-                margin-left: 40%;
-                margin-top: 30px;
-                margin-bottom: 30px
+            .content_container {
+                display: flex; /* Flexbox layout */
+                flex-direction: row; /* Arrange image and text side by side */
+                justify-content: center;
+                align-items: center; /* Align vertically */
+                width: 100%;
             }
-            .about_description {
-                display:flex;
-                margin-left: 45%;
+            .image_container {
+                display: flex; /* Flexbox for the image */
+                justify-content: center; /* Center the image within its container */
+                align-items: flex-start; /* Center the image vertically */
+                width: 200%;
+                height: 100%; /* Set the image container width */
+                margin-right: 30px;/* Space between the image and text */
+                margin-top: 0;
+            }
+            .text_container{
                 margin-right: 5%;
-                font-size: 23px
+                margin-top: 0;
+            }
+            .ringsimage{
+                width: 80%;
+                height: auto;
+                margin-right: 20px; 
+            }
+            .text_about {
+            font-size: 5em;
+            margin-left: 35%; 
+            margin-bottom: 10px; 
+            font-weight: bold
+            }
+
+            .about_description {
+                display: flex;
+                flex-direction: column; /* Align text vertically */
+                justify-content: center; /* Center text vertically within the container */
+                align-items: center; /* Center text horizontally within the container */
+                font-size: 23px;
+                text-align: center; /* Ensures text is aligned in the center */
             }
             footer {
                 text-align: center;
@@ -64,57 +78,131 @@
             }
             a {
             padding: 15px;            
-        }
-        #hamicon {
-            width: 40px;
+            }
+            #close {
             display: none;
-        }
-        #close {
-            display: none;
-        }
+            }
         @media only screen and (max-width: 800px) {
-            #hamicon, #close {display: block;}
-            a {display: block;}
-            #navlinks {display: none;}
-            .boxit {display: flex;
-                justify-content: space-between;
+            #hamicon {
+                display: block;
+            }
+            #close {
+                display: block;
+                margin: 0 auto;
+                cursor: pointer;
+                color: white;
+            }
+            a {
+                display: block;
+            }
+            #navlinks {
+                display: none; /* hide inline links on small screens */
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+                text-align: center;
+                padding: 10px 0;
+                position: absolute;  /* Position it below the nav box */
+                top: 100%; 
+            }
+            .nav_box {
+                margin: 0 20px;
+                margin-top: 20px;
+            }
+            body {
+                background-position: center top; /* Adjust background positioning */
+            }
+            main {
+                flex-direction: column;
+                align-items: center; /* Center content */
+                justify-content: flex-start;
+            }
+            .content_container {
+                flex-direction: column; /* Stack image and text vertically */
+                align-items: center; /* Center align items */
+            }
+            .image_container {
+                width: 80%;
+                height: auto;
+                margin: 0 auto 20px auto; /* Add some spacing below the image */
+            }
+            .text_container{
+                margin-right: 0;
+                margin-left: 2%;
+                margin-top: 0;
+            }
+            .ringsimage {
+                width: 100%;
+                height: auto;
             }
         }
+
     </style>
-    <script>
-        function showNav () {
-            document.getElementById("navlinks").style.display = "block";
-        }
-        function hideNav () {
-            document.getElementById("navlinks").style.display = "none";
-        }
-    </script>
 </head>
-<body>
-    <div class="boxit">
-        <img id="hamicon" onclick="showNav();" src="../images/whitemenu.png" alt="hamburger icon">
-        
-    </div>
+<body>  
     <div class = "nav_box">
         <a class = "nav_name" href ="index.html">DYLAN MILLS</a>
+        <img id="hamicon" onclick="showNav();" src="../images/whitemenu.png" alt="hamburger icon">
         <nav id="navlinks">
-            <p id="close" onclick="hideNav();">X</p>
-            <a href="projectabout.html">ABOUT</a>
+            <a href="projectabout.html" class = "active" style = "opacity: 1">ABOUT</a>
             <a href="projectgallery.html">GALLERY</a>
+            <a href="index.html#resume_section">RESUME</a>
             <a href = projectnews.html>NEWS</a>
             <a href="projectcontact.html">CONTACT</a>
         </nav>
     </div>
-        <main>
-              <p class = "text_about glow">about</p>
-              <p class = "about_description">
-                Dylan Mills is an aspiring musical theater performer from North Reading, a town just outside of Boston, MA. <br> </br> Early on, he discovered that his love for gymnastics could be incorporated into musical theater and he never looked back. Dylan has spent the past eight years honing his craft in singing, acting, and dancing, as well as picking up a few new skills here and there (like trapeze and boxing). Over time, he has developed a passion for physical theater and pushing himself outside of his comfort zone. Most of his performance time has been spent on the stage of his high school and local theaters, but he is eager to expand his horizons. </br> <br> He is currently pursuing these goals as a student at Syracuse University, engaging in student-run productions and courses taught by esteemed faculty.
-              </p>
-        </main>
-        <footer>
-            <p>&copy; 2025 - All Rights Reserved</p>
-        </footer>
+    <main>
+        <div class="content_container">
+            <div class="image_container">
+                <img class="ringsimage" src="../images/ringsphotoblackbgd.jpg" alt="Dylan hanging on the rings">
+            </div>
+            <div class="text_container">
+                <p class="text_about">ABOUT</p>
+                <p class="about_description">
+                    Dylan Mills is an aspiring musical theater performer from North Reading, a town just outside of Boston, MA. <br> </br> Early on, he discovered that his love for gymnastics could be incorporated into musical theater and he never looked back. Dylan has spent the past eight years honing his craft in singing, acting, and dancing, as well as picking up a few new skills here and there (like trapeze and boxing). Over time, he has developed a passion for physical theater and pushing himself outside of his comfort zone. Most of his performance time has been spent on the stage of his high school and local theaters, but he is eager to expand his horizons. </br> <br> He is currently pursuing these goals as a student at Syracuse University, engaging in student-run productions and courses taught by esteemed faculty.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 - All Rights Reserved</p>
+    </footer>
+    <div id="sideNav">
+        <span id="closeBtn" onclick="hideNav()">×</span>
+        <a href="projectabout.html">ABOUT</a>
+        <a href="projectgallery.html">GALLERY</a>
+        <a href="index.html#resume_section">RESUME</a>
+        <a href="projectnews.html">NEWS</a>
+        <a href="projectcontact.html">CONTACT</a>
+        </div>
     
+        <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        </div>
+    
+        <script>
+        function showNav() {
+            document.getElementById("sideNav").style.width = "50%";
+        }
+    
+        function hideNav() {
+            document.getElementById("sideNav").style.width = "0";
+        }
+    
+        const modal = document.getElementById('myModal');
+        const img = document.getElementById('headshotimage');
+        const modalImg = document.getElementById("img01");
+        const span = document.getElementsByClassName("close")[0];
+    
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        </script>
     </body>
-
 </html>

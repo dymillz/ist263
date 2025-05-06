@@ -2,191 +2,294 @@
 
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="projectstyles.css">
-        <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projectstyles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
 
-        <title>Dylan Mills | Gallery</title>
-        <style>
+    <title>Dylan Mills | Gallery</title>
+    <style>
         body {
-            background-color: black
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Apply font-family */
         }
-            nav {
-                display: flex;
-                border: white, 10px solid;
-                margin-top: 30px;
-                margin-right: 50px;
-                margin-left: 50px;
-                border-radius: 5px;
-            }
-            .navtext a {
-                font-size: 4em;
-            }
-            .navtext a:link {
-                font-size: 4em;
-                font-weight: bold;
-                text-decoration: none;
-                color: white;
-                margin-left: 20px;
-                margin-top: 30px;
-            }
-            .hamburger {
-                position: absolute;
-                right: 90px;
-                margin-top: 30px;
-                margin-bottom: 20px
-            }
-            .box_gallery {
-                display: flex;
-                margin-left: 50px;
-                margin-right: 50px;
-                flex-direction: column;
-                align-items: center;;
-            }
-            .text_gallery {
-                margin-left: 50px;
-                font-size: 5em;
-                color: white;
-                display: flex;
-                margin-top: 4px;
-                margin-bottom: 30px;
-            }
-            
-            .description {
-                margin-left: 20px;
-            }
-          
-            .box_sponge, .box_pippin, .box_burnout, .box_newsies {
-                width: 550px;
-                height: 450px;
-                position: relative;
-                display: flex;
-                align-items: center;
-            }
 
-            .all_articles {
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap; 
-                gap: 20px;
-                justify-content: center;
-            }
+        .box_gallery {
+            display: flex;
+            margin-left: 50px;
+            margin-right: 50px;
+            flex-direction: column;
+            align-items: center;;
+        }
 
-            footer {
-                text-align: center;
-                padding: 20px;
-                background-color: #000;
-                color: white;
-            }
+        .text_gallery {
+            margin-left: 2px;
+            font-size: 5em;
+            color: white;
+            display: flex;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-align: center; /* Added this line to center the text */
+        }
+        .description {
+            margin-left: 20px;
+        }
 
-            .showimage {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: opacity 0.5s ease; /* Ensure smooth opacity transition */
-            }
+        .box_sponge, .box_pippin, .box_burnout, .box_newsies {
+            width: 550px;
+            height: 450px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
 
-            @media only screen and (max-width: 800px) {
-    .navtext a {
-        font-size: 0.8em;
-    }
+        .all_articles {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px;
+            justify-content: center;
+        }
 
-    .hamburger img {
-        width: 80px;
-        height: auto;
-    }
-}
-                
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+        }
 
+        .showimage {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease; /* Ensure smooth opacity transition */
+            border: none; /* Remove border on image */
+        }
+
+        @media only screen and (max-width: 800px) {
+        #hamicon {
+            display: block;
+        }
+        #close {
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            color: white;
+        }
+        a {
+            display: block;
+        }
+        #navlinks {
+            display: none; /* hide inline links on small screens */
+            flex-direction: column;
+            width: 100%;
+            background-color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;  /* Position it below the nav box */
+            top: 100%; 
+        }
+        .nav_box {
+            margin: 0 20px;
+            margin-top: 20px;
+        }
+        body {
+            background-position: center top; /* Adjust background positioning */
+        }
+        main {
+            flex-direction: column;
+            align-items: center; /* Center content */
+            justify-content: flex-start;
+        }
+        .overlay {
+            display: none;
+        }
+        }
 
     /* Hover Effect*/
-            .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
+        .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s ease; /* Smooth fade-in for overlay */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        }
+
+        .box_sponge:hover .overlay,.box_pippin:hover .overlay,.box_burnout:hover .overlay, .box_newsies:hover .overlay{
+        opacity: 1; /* Show overlay on hover */
+        }
+
+        .box_sponge:hover .showimage, .box_pippin:hover .showimage, .box_burnout:hover .showimage, .box_newsies:hover .showimage {
+        opacity: 0.9; /* Reduce image opacity when hovered */
+        }
+
+        .description {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
             left: 0;
-            right: 0;
-            height: 100%;
+            top: 0;
             width: 100%;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.5s ease; /* Smooth fade-in for overlay */
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            }
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
 
-            .box_sponge:hover .overlay,.box_pippin:hover .overlay,.box_burnout:hover .overlay, .box_newsies:hover .overlay{
-            opacity: 1; /* Show overlay on hover */
-            }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            height: auto;
+            border: 0; /* Remove border from modal image */
+        }
 
-            .box_sponge:hover .showimage, .box_pippin:hover .showimage, .box_burnout:hover .showimage, .box_newsies:hover .showimage {
-            opacity: 0.9; /* Reduce image opacity when hovered */
-            }
-
-            .description {
+        .modal-caption {
             color: white;
-            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .modal-close {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            }
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
-        </style>
-        
-    </head>
-
-    <body>
-        <nav>
-            <p class="navtext"><a href= "index.html">DYLAN MILLS</a></p>
-            <div class = "hamburger"><a href="projectnavigation.html"><img src = "../images/squareham.png" alt="hamburgericon" width="100" height="60"></a>
-            </div>
+<body>
+    <div class="nav_box">
+        <a class="nav_name" href="index.html">DYLAN MILLS</a>
+        <img id="hamicon" onclick="showNav();" src="../images/whitemenu.png" alt="hamburger icon">
+        <nav id="navlinks">
+            <a href="projectabout.html">ABOUT</a>
+            <a href="projectgallery.html" class="active" style="opacity:1">GALLERY</a>
+            <a href="index.html#resume_section">RESUME</a> 
+            <a href="projectnews.html">NEWS</a>
+            <a href="projectcontact.html">CONTACT</a>
         </nav>
+    </div>
 
-        <div class = "box_gallery">
-            <p class = "text_gallery glow">gallery</p>
-            <div class = "all_articles">
+    <main>
+        <div class="box_gallery">
+            <p class="text_gallery">GALLERY</p>
+            <div class="all_articles">
 
-                <article class = "box_sponge">
-                    <img src = "../images/spongebobfly.jpg" alt="Dylan Mills as Spongebob flying above the stage" class = "showimage" >
-                        <div class="overlay">
-                            <div class = "description"><p><strong>The SpongeBob Musical (SpongeBob):</strong> Dylan learned how to fly with the help of <a href="https://www.zfxflying.com/">ZFX Flying Effects</a>.</p>
-                            </div>
-                        </div>
+                <article class="box_sponge">
+                    <img src="../images/spongebobfly.jpg"
+                        alt="Dylan Mills as Spongebob flying above the stage"
+                        class="showimage"
+                        onclick="openModal(this)"
+                        data-caption="The SpongeBob Musical (SpongeBob): Dylan learned how to fly with the help of ZFX Flying Effects.">
+                    <div class="overlay">
+                        <div class="description"><p><strong>The SpongeBob Musical (SpongeBob):</strong> Dylan learned how to fly with the help of <a href="https://www.zfxflying.com/">ZFX Flying Effects</a>.</p></div>
+                    </div>
                 </article>
 
-            <article class = "box_pippin">
-                <img src = "../images/pippintrapeze.jpeg" alt="Dylan Mills as Leading Player on the trapeze" class = "showimage">
+                <article class="box_pippin">
+                    <img src="../images/pippintrapeze.jpeg"
+                        alt="Dylan Mills as Leading Player on the trapeze"
+                        class="showimage"
+                        onclick="openModal(this)"
+                        data-caption="Pippin (Leading Player): Dylan trained at a circus school for two months and performed on the trapeze in 'Magic to Do'.">
                     <div class="overlay">
-                        <div class = "description"><p><strong>Pippin (Leading Player):</strong> Dylan trained at a circus school for two months where he learned skills on the trapeze to perform during the opening number, “Magic to Do”.</p>
-                        </div>
+                        <div class="description"><p><strong>Pippin (Leading Player):</strong> Dylan trained at a circus school for two months where he learned skills on the trapeze to perform during the opening number, “Magic to Do”.</p></div>
                     </div>
-            </article>
-        
-            <article class = "box_burnout">
-                <img src = "../images/burnoutrobe.jpg" alt="Dylan Mills as AJ Chopra in his boxing robe" width="250" height="150" class = "showimage">
-                    <div class="overlay">
-                        <div class = "description"><p><strong>Beautiful Burnout (Ajay Chopra):</strong> Dylan trained at a local boxing gym for a month. He learned proper boxing terminology and technique, as well as worked with a boxing coach to choreograph the final, 10-minute, boxing match scene at the end of the play, Beautiful Burnout.</p>
-                        <div>
-                    </div>
-            </article>
+                </article>
 
-            <article class = "box_newsies">
-                <img src = "../images/newsiescartwheel.jpeg" alt="Dylan Mills as Albert, carthwheeling over a chair in 'King of New York'" class = "showimage">
+                <article class="box_burnout">
+                    <img src="../images/burnoutrobe.jpg"
+                         alt="Dylan Mills as AJ Chopra in his boxing robe"
+                         class="showimage"
+                         onclick="openModal(this)"
+                         data-caption="Beautiful Burnout (Ajay Chopra): Dylan trained in boxing to choreograph a 10-minute fight scene.">
                     <div class="overlay">
-                        <div class =  "description">
-                            <p><strong>Newsies (Albert):</strong> Dylan combined his gymnastics ability and dance skills in the tap number, "King of New York".</p>
-                        </div>
+                      <div class="description"><p><strong>Beautiful Burnout (Ajay Chopra):</strong> Dylan trained at a local boxing gym for a month. He learned proper boxing terminology and technique, as well as worked with a boxing coach to choreograph the final, 10-minute, boxing match scene at the end of the play, Beautiful Burnout.</p></div>
                     </div>
-            </article>
+                </article>
+
+                <article class="box_newsies">
+                    <img src="../images/newsiescartwheel.jpeg"
+                         alt="Dylan Mills as Albert, carthwheeling over a chair in 'King of New York'"
+                         class="showimage"
+                         onclick="openModal(this)"
+                         data-caption="Newsies (Albert): Dylan combined gymnastics and dance in 'King of New York'.">
+                    <div class="overlay">
+                      <div class="description"><p><strong>Newsies (Albert):</strong> Dylan combined his gymnastics ability and dance skills in the tap number, "King of New York".</p></div>
+                    </div>
+                </article>
+            </div>
         </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 - All Rights Reserved</p>
     </footer>
 
-    </body>
+    <div id="sideNav">
+        <span id="closeBtn" onclick="hideNav()">×</span>
+        <a href="projectabout.html">ABOUT</a>
+        <a href="projectgallery.html">GALLERY</a>
+        <a href="index.html#resume_section">RESUME</a>
+        <a href="projectnews.html">NEWS</a>
+        <a href="projectcontact.html">CONTACT</a>
+    </div>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <script>
+        function showNav() {
+            document.getElementById("sideNav").style.width = "50%";
+        }
+
+        function hideNav() {
+            document.getElementById("sideNav").style.width = "0";
+        }
+
+        // Open modal and display clicked image and caption
+        function openModal(image) {
+            const modal = document.getElementById('myModal'); // Correct modal id
+            const modalImg = document.getElementById("img01");
+            const caption = document.getElementById("modalCaption");
+
+            modal.style.display = "block";
+            modalImg.src = image.src; // Set modal image to clicked image
+            caption.innerHTML = image.getAttribute("data-caption"); // Set caption from clicked image's data-caption attribute
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
 </html>

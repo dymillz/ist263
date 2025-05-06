@@ -1,159 +1,285 @@
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="projectstyles.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+  <title>Dylan Mills | Contact</title>
+  <style>
+    body {
+      background-color: black;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="projectstyles.css">
-        <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
 
-        <title>Dylan Mills | Contact</title>
-    </head>
-    <style>
-         body {
-            height: 100%;
-            background-image: url("../images/dylanmillscloseupextendededited.jpg");
-            height: 100vh;
-            /*min-height: 100vh;*/
-            background-size: cover;
-            background-position: center;
-            /*background-position-x: 60%, right;
-            background-position-y: 1000, top;*/
-            background-repeat: no-repeat;
-         }
-        nav {
-                display: flex;
-                border: white, 10px solid;
-                margin-top: 30px;
-                margin-right: 50px;
-                margin-left: 50px;
-                border-radius: 5px;
-            }
-        .navtext a:link {
-            font-size: 4em;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            margin-left: 20px;
-            margin-top: 30px;
-        }
-        .hamburger {
-            position: absolute;
-            right: 90px;
-            margin-top: 30px;
-            margin-bottom: 20px
-        }
-        main {
-            flex: 1; /* Fills available space */
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Keep content starting at top */
-            padding-bottom: 10%
-        }
-        .text_connect {
-             margin-left: 10%;
-             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 5em;
-            margin-left: 40%;
-            margin-top: 30px;
-            margin-bottom: 30px
-            }
-        
-        label {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px; /*gap to place space between hte boxes*/
-            max-width: 600px;
-            text-align: left;
-            margin-left:50%;
-            color: white;
-        }
+    .content_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
 
-        .firstlast_containers {
-            display: flex;
-            gap: 10px;
-        }
+    .image_container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            box-sizing: border-box; /*keeps box at 100% including borders and padding */
-            opacity: 0.5; /* 70% opacity */
-        }
+    .closeup {
+      width: 110%;
+      height: auto;
+    }
 
-        input:focus, textarea:focus {
-            box-shadow: 0 0 5px 2.5px rgb(255, 255, 255);
-            outline: none;
-        }
+    .form_container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px;
+    }
 
-        input::placeholder, textarea::placeholder {
-            color: #888;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        }
+    .text_connect {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 5em;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold
+    }
+    .connect_caption {
+        margin-left: 13%;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+      width: 100%;
+      color: white;
+      margin: 0 auto;
+    }
 
-        button {
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
-            border: none;
-            cursor: pointer;
-        }
+    .firstlast_containers {
+      display: flex;
+      gap: 10px;
+    }
 
-        button:hover {
-            box-shadow: 0 0 10px 5px rgb(255, 255, 255);
-        }   
-        .socials {
-            display: flex;
-            margin-left: 67.5%;
-            margin-top: 2%;
-            gap: 25px;
-        }
-        footer {
-            text-align: center;
-            background-color: #000;
-            color: #fff;
-            margin-top: auto; 
-            width: 100%;
-        }
-    </style>
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      box-sizing: border-box;
+      opacity: 0.5;
+    }
 
-    <body>
-            <nav>
-                <p class="navtext"><a href= "index.html">DYLAN MILLS</p></a>
-                <div class = "hamburger"><a href="projectnavigation.html"><img src = "../images/squareham.png" alt="hamburgericon" width="100" height="60"></a>
-                </div>
-            </nav>
-            <main>
-                <p class = "text_connect glow">connect</h1>
-                <div class = "form">
-                    <form action="https://formspree.io/f/mnnjznqg" method="post">
-                        <div class="firstlast_containers">
-                            <input type="text" id="first-name" placeholder="First Name" required>
-                            <input type="text" id="last-name" placeholder="Last Name" required>
-                        </div>
-                        <input type="email" id="email" placeholder="Email" required>
-                        <input type="text" id="subject" placeholder="Subject" required>
-                        <textarea id="message" placeholder="Your Message" required height = "150"></textarea><!--placeholder puts label inside-->
-                        <button type="submit"><strong>SUBMIT</strong></button>
-                    </form>
-                        
-                </div>
-                <div class = "socials">
-                    <a href="https://www.instagram.com/thekidthatflips/"><img src = "../images/instagramlogo.png" alt = "Instagram Logo" width="30" height="30"></a>
-                    <a href="https://www.facebook.com/profile.php?id=100094337165685"><img src = "../images/facebooklogo.png" alt = "Facebook Logo" width="30" height="30"></a>
-                </div>
-            </main>
-            <footer>
-                <p>&copy; 2025 - All Rights Reserved</p>
-            </footer>  
-    </body>
+    input:focus, textarea:focus {
+      box-shadow: 0 0 5px 2.5px rgb(255, 255, 255);
+      outline: none;
+    }
 
+    input::placeholder, textarea::placeholder {
+      color: #888;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 25px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      width: 100%;
+    }
+
+    #hamicon {
+      display: none;
+    }
+
+    #close {
+      display: none;
+    }
+
+    @media only screen and (max-width: 800px) {
+      #hamicon {
+        display: block;
+      }
+
+      #close {
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        color: white;
+      }
+
+      a {
+        display: block;
+      }
+
+      #navlinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 100%;
+      }
+
+      .nav_box {
+        margin: 0 20px;
+        margin-top: 20px;
+      }
+
+      body {
+        background-position: center top;
+      }
+
+      main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .content_container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text_connect{
+        margin-top: 15px;
+      }
+      .image_container{
+        width: 100%;
+        padding: 0px;
+      }
+      .form_container {
+        width: 100%;
+        padding: 0px;
+      }
+
+      .closeup {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .text_connect {
+        font-size: 3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav_box">
+    <a class="nav_name" href="index.html">DYLAN MILLS</a>
+    <img id="hamicon" onclick="showNav();" src="../images/whitemenu.png" alt="hamburger icon" />
+    <nav id="navlinks">
+      <a href="projectabout.html">ABOUT</a>
+      <a href="projectgallery.html">GALLERY</a>
+      <a href="index.html#resume_section">RESUME</a>
+      <a href="projectnews.html">NEWS</a>
+      <a href="projectcontact.html" class = "active" style = "opacity: 1">CONTACT</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="content_container">
+      <div class="image_container">
+        <img class="closeup" src="../images/dylanmillscloseupextended.jpg" alt="Dylan closeup headshot" />
+      </div>
+      <div class="form_container">
+        <p class="text_connect">CONNECT</p>
+        <form action="https://formspree.io/f/mnnjznqg" method="post">
+        <div class = "connect_caption">
+            <p>Reach out with performance opportunities or just to say hello!</p>
+        </div>
+          <div class="firstlast_containers">
+            <input type="text" id="first-name" placeholder="First Name" required />
+            <input type="text" id="last-name" placeholder="Last Name" required />
+          </div>
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="subject" placeholder="Subject" required />
+          <textarea id="message" placeholder="Your Message" required height="150"></textarea>
+          <button type="submit"><strong>SUBMIT</strong></button>
+        </form>
+        <div class="socials">
+          <a href="https://www.instagram.com/thekidthatflips/"><img src="../images/instagramlogo.png" alt="Instagram Logo" width="30" height="30" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100094337165685"><img src="../images/facebooklogo.png" alt="Facebook Logo" width="30" height="30" /></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - All Rights Reserved</p>
+  </footer>
+
+  <div id="sideNav">
+    <span id="closeBtn" onclick="hideNav()">×</span>
+    <a href="projectabout.html">ABOUT</a>
+    <a href="projectgallery.html">GALLERY</a>
+    <a href="index.html#resume_section">RESUME</a>
+    <a href="projectnews.html">NEWS</a>
+    <a href="projectcontact.html">CONTACT</a>
+    </div>
+
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+    function showNav() {
+        document.getElementById("sideNav").style.width = "50%";
+    }
+
+    function hideNav() {
+        document.getElementById("sideNav").style.width = "0";
+    }
+
+    const modal = document.getElementById('myModal');
+    const img = document.getElementById('headshotimage');
+    const modalImg = document.getElementById("img01");
+    const span = document.getElementsByClassName("close")[0];
+
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    </script>
+</body>
 </html>

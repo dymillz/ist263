@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 p, footer{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .glow {
@@ -13,6 +16,37 @@ footer {
     background-color: #000;
     color: #fff;
 }
+.nav_box {
+    display: flex;
+    border: white solid 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.nav_name {
+    flex: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    white-space: nowrap;  /* Prevent the nav name from wrapping */
+    font-size: 2em; /* You can adjust this as needed */
+    }
+
+#navlinks {
+    flex: 2;
+    display: flex;
+    justify-content: space-around; /* or space-evenly depending on your layout */
+    align-items: center;
+    gap: 0px;
+}
 #navlinks a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
@@ -20,7 +54,6 @@ footer {
     text-decoration: none;
     color: white;
     opacity: 0.6;
-    margin-top: 50px;
 }
 
 #navlinks a:hover {
@@ -30,13 +63,60 @@ footer {
     text-align: center;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
 }
-.nav_name {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    margin-left:0px;
-    margin-top: 0px;
-    margin-right: 34%
+nav a.active {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #bcbcbc, 0 0 20px #bcbcbc, 0 0 25px #bcbcbc, 0 0 30px #bcbcbc, 0 0 35px #bcbcbc;
+  }  
+#hamicon {
+    width: 40px;
+    margin-left: auto;
+    display: none;
+    width: 40px;
+    display: none;
+    margin-left: auto; 
+    margin-right: 5%;
 }
+#closeBtn {
+    position: absolute;  /* Ensures it is in the top-right corner */
+    top: 20px;
+    right: 20px;
+    color: white;  /* Ensures visibility on dark background */
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;  /* Ensures it’s on top of other elements */
+}
+#sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 2000;
+  }
+
+  #sideNav a {
+    display: block;
+    padding: 20px;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.6;
+  }
+
+  #sideNav a:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px white;
+  }
+
+  #sideNav #closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 3em;
+    cursor: pointer;
+  }
