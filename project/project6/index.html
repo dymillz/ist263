@@ -257,7 +257,13 @@
     <a><img
       id="headshotimage"
       src="../images/headshotcropped.jpg"
-      alt="Dylan Mills Headshot"/></a>
+      alt="Dylan Mills Headshot"
+      onclick = "openModal()"/></a>
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01" alt="" src="../images/placeholder.png">
+      </div>
+      <span class="close" onclick="closeModal()">&times;</span>
     <a href="../images/websiteresume25.pdf" target="_blank">
       <img
         id="resumeimage"
@@ -292,26 +298,18 @@
       document.getElementById("sideNav").style.width = "0";
     }
 
-  function openModal(imgElement) {
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("img01");
-    const modalCaption = document.getElementById("modalCaption");
+      function openModal() {
+      const imgElement = document.getElementById("headshotimage");
+      const modal = document.getElementById("myModal");
+      const modalImg = document.getElementById("img01");
 
-    modal.style.display = "block";
-    modalImg.src = imgElement.src;
-    modalCaption.textContent = imgElement.getAttribute("data-caption");
-  }
-
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    const modal = document.getElementById("myModal");
-    if (event.target === modal) {
-      closeModal();
+      modal.style.display = "block";
+      modalImg.src = imgElement.src;
     }
-  }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
   </script>
 </body>
 </html>
