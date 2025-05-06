@@ -68,6 +68,22 @@
             transition: opacity 0.5s ease; /* Ensure smooth opacity transition */
             border: none; /* Remove border on image */
         }
+        .skip {
+            background-color: white;
+            opacity: 1;
+            padding: 8px;
+            border: 2px solid blue;
+            color: blue;
+            opacity: 1;
+            text-decoration: none;
+            position: absolute; /*will stay in one spot no matter what, inlcuding floats*/
+            top: 10px;
+            left:-999px; /*pushes the button OFF screen*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .skip:focus { /*when button is tabbed to*/
+            left: 10px;
+        }  
 
         @media only screen and (max-width: 800px) {
         #hamicon {
@@ -184,6 +200,7 @@
     <div class="nav_box">
         <a class="nav_name" href="index.html">DYLAN MILLS</a>
         <img id="hamicon" onclick="showNav();" src="../images/whitemenu.png" alt="hamburger icon">
+        <a href="#skip" class ="skip">Skip To Content</a><br>
         <nav id="navlinks">
             <a href="projectabout.html">ABOUT</a>
             <a href="projectgallery.html" class="active" style="opacity:1">GALLERY</a>

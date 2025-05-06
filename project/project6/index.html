@@ -37,7 +37,7 @@
       flex-wrap: wrap;
       justify-content: center;
       position: absolute;
-      top: 20px;
+      top: 25px;
       width: 100%;
     }
 
@@ -170,6 +170,22 @@
       display: none;
       width: 100%;
     }
+    .skip {
+        background-color: white;
+        opacity: 1;
+        padding: 8px;
+        border: 2px solid blue;
+        color: blue;
+        opacity: 1;
+        text-decoration: none;
+        position: absolute; /*will stay in one spot no matter what, inlcuding floats*/
+        top: 10px;
+        left:-999px; /*pushes the button OFF screen*/
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    .skip:focus { /*when button is tabbed to*/
+      left: 10px;
+}  
 
     @media only screen and (max-width: 1066px) {
       nav {
@@ -212,6 +228,7 @@
       #resumeimage {
         width: 95%;  
       }
+      
     }
   </style>
 </head>
@@ -219,6 +236,7 @@
   <div class="box_landing">
     <img id="hamicon" onclick="showNav();" src="../images/whitemenu.png" alt="menu" />
     <nav>
+      <a href="#skip" class ="skip">Skip To Content</a><br>
       <a href="projectabout.html">ABOUT</a>
       <a href="projectgallery.html">GALLERY</a>
       <a href="#resume_section">RESUME</a> 

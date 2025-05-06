@@ -122,3 +122,18 @@ nav a.active {
     font-size: 3em;
     cursor: pointer;
   }
+  .skip{
+    background-color: white;
+    opacity: 1;
+    padding: 8px;
+    border: 2px solid blue;
+    color: blue;
+    opacity: 1;
+    text-decoration: none;
+    position: absolute; /*will stay in one spot no matter what, inlcuding floats*/
+    top: 10px;
+    left:-999px; /*pushes the button OFF screen*/
+}
+.skip:focus { /*when button is tabbed to*/
+    left: 10px;
+}   
